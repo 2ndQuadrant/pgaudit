@@ -20,3 +20,8 @@ CREATE FUNCTION pgaudit_sql_drop()
 CREATE EVENT TRIGGER pgaudit_sql_drop
 	ON sql_drop
 	EXECUTE PROCEDURE pgaudit_sql_drop();
+
+CREATE EVENT TRIGGER pgaudit_sql
+        ON sql_drop
+        EXECUTE PROCEDURE pgaudit_sql_drop();
+
